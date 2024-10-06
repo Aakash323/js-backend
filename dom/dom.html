@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121;">
+    <ul style="color: aliceblue;">
+        <li > maths</li>
+    </ul>
+
+</body>
+<script>
+    const li =document.createElement('li') // we can add an element in the document
+    li.innerHTML = "science"
+    document.querySelector('ul').appendChild(li)
+
+    // we can also create function for it
+    function addLang(lang){
+        const li = document.createElement('li')
+        li.innerText= `${lang}`
+        document.querySelector('ul').appendChild(li)
+    }
+    addLang("social")
+
+    // we create and function to edit the element
+    function editLang(lang){
+        const li1 = document.querySelector('li:nth-child(1)')
+        const li = document.createElement('li')
+        li.textContent = `${lang}`
+        li1.replaceWith(li)
+    
+    }
+    editLang("nepali")
+
+
+    // we can remove element by
+
+    const removes = document.querySelector('li')
+    removes.remove()
+</script>
+</html>
