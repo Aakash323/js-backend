@@ -1,2 +1,2 @@
 # js-backend
-basic js for backend
+js fundamentals
